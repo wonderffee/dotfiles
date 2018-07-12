@@ -1,7 +1,11 @@
+if has('python3')
+  silent! python3 1
+endif
 "call pathogen#infect()
 "set transparency=10
 ":colorscheme evening
 "colorscheme ir_black
+let g:ycm_server_python_interpreter='/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/bin/python3.7'
 "设置菜单语言
 set langmenu=zh_cn
 syntax on
@@ -378,7 +382,6 @@ nnoremap tn gt
 nnoremap tp gT
 
 set nocompatible              " 去除VI一致性,必须要添加
-filetype off                  " 必须要添加
 
 " 设置包括vundle和初始化相关的runtime path
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -389,6 +392,7 @@ call vundle#begin()
 " 让vundle管理插件版本,必须
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'Valloric/YouCompleteMe'
 "Plugin 'MaryHal/AceJump.vim'
 " 以下范例用来支持不同格式的插件安装.
 " 请将安装插件的命令放在vundle#begin和vundle#end之间.
